@@ -2,7 +2,8 @@
 layout: post
 title: "Test"
 usemathjax: true
-img: "assets/img/output_11_0.png"
+img: "assets/img/output_33_1.png"
+teaser: This is a long test teaser. Will it work?
 ---
 
 # Simple Linear Regression

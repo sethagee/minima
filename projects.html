@@ -4,7 +4,11 @@ title: Projects
 permalink: /projects/
 ---
 
-My portfolio of projects and other related items.
+<p> My portfolio of projects and other related items. </p>
+
+<!-- 
+	Seems like images need to be same size. I want to make this look better if possible.
+ -->
 
 <div class="portfolio-grid">
     {% for item in site.portfolio %}
@@ -26,3 +30,16 @@ My portfolio of projects and other related items.
     </div>
     {% endfor %}
 </div>
+
+<style>
+.colL {
+    float: left;
+    width: 80%;
+    padding-bottom: 20px;
+}
+.colR {
+    float: left;
+    width: 20%;
+    padding-bottom: 20px;
+}
+</style>

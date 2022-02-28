@@ -3,6 +3,7 @@ layout: post
 title: "Test"
 usemathjax: true
 img: "assets/img/output_11_0.png"
+teaser: Another teaser. This time its really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really  long.
 ---
 
 # Simple Linear Regression

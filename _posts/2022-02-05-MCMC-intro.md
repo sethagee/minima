@@ -4,6 +4,8 @@ usemathjax: true
 title: "MCMC in Practice - Introduction to Markov Chain Monte Carlo"
 ---
 
+![png](/assets/img/mh-algo.png)
+
 # Introduction to the problem
 
 When speaking about the probability of some event, we are really speaking about integration over some probability distribution. In most applications, we are interested also in computing expectations of functions of random variables (to find the mean, variance, etc.). 
