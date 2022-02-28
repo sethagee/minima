@@ -50,6 +50,11 @@ minima:
 #header_pages:
 # - about.md
 
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:name
+
 # Build settings
 theme: minima
 

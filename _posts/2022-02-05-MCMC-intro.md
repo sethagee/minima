@@ -6,13 +6,13 @@ title: "MCMC in Practice - Introduction to Markov Chain Monte Carlo"
 
 # Introduction to the problem
 
-When speaking about the probability of some event, we are really speaking about integration over some probability distribution. While finding this integral is possible in some applications, high dimensional distributions can lead to
-difficult or impossible to compute integrals. In particular, we are interested in computing expecations.
+When speaking about the probability of some event, we are really speaking about integration over some probability distribution. In most applications, we are interested also in computing expectations of functions of random variables (to find the mean, variance, etc.). 
+While integrating in this fashion is possible in some cases, high dimensional distributions can lead to difficult or impossible to compute integrals.
 
 Given such a distribution, one may take samples from the distribution, then compute the average value to approximate the expectation. This process of sampling then calculating
 some average to approximate the value of an integral of interest is known as *Monte Carlo* integration. So long as our samples are independently drawn, we can be guaranteed a good estimate by laws of large numbers.
 
-However, since our distributions can be so non-standard, sampling independently is not feasible. To remedy this issue, we may construct some dependent sampling process that eventually will provide us with samples from our
+However, sampling independently is not feasible in all cases. To remedy this issue, we may construct some dependent sampling process that eventually will provide us with samples from our
 desired distribution, given that it is run long enough. These dependent samples will be a *Markov chain*, and the fact that their distribution eventually comes from the distribution of interest (or the target distribution)
 will be due to the famous Metropolis-Hastings algorithm.
 
@@ -20,11 +20,15 @@ We now introduce the technical details necessary to explore Markov chain Monte C
 
 ## Bayesian inference
 
-Much of the discussion to come will be Bayesian in nature. What exactly does this mean?
+Many applications of MCMC are found in Bayesian inference (though frequentists may have use for it sometimes, as well). What exactly does this mean?
 
-In the frequentist approach, unknown parameters are seen as being fixed but unknown values. Bayesians, on the other hand
-find no distinction between observations and parameters: both should be considered as random variables. Let $$ D $$ and
-$$ \theta $$ denote the observed data and model parameters (and missing data), respectively. We can then set up the joint
+In the frequentist approach, probabilities are seen as long run frequencies (objective). Bayesians, on the other hand,
+see probability as a quantification of uncertainty about the world (subjective). In Bayesian thought, we notably allow for parameters themselves to be random variables.
+Many consider Bayesian inference to be more scientific and intuitive in nature, though this is also a topic of debate.
+Here is the set up for a full probability model in Bayesian style:
+
+Let $$ D $$ and $$ \theta $$ denote the observed data and model parameters (and missing data), respectively. It is useful in some
+cases to think of $$ \theta $$ as some hypothesis we have, and $$ D $$ the observed evidence about that hypothesis. We can then set up the joint
 probability distribution over all random quantities:
 
 $$ P(D,\theta) = P(D|\theta)P(\theta). $$
@@ -53,7 +57,7 @@ $$ f $$ is
 $$ E[f(\theta)| D] = \frac{\int f(\theta)P(\theta)P(D|\theta)d\theta}{\int P(\theta)P(D|\theta)d\theta}. $$
 
 The required integrals in the above expression have been the source of most practical difficulties in Bayesian inference. 
-Analytically, the integrations are impossible in most applications, and even numerical methods/approximatations tend to be difficult,
+Analytically, the integrations are impossible in most applications, and even numerical methods/approximations tend to be difficult,
 innacurate, or impossible when dealing with a high number of dimensions. In this case, Monte Carlo integration and MCMC
 can allow us to find approximatations for these integrals.
 
@@ -75,8 +79,8 @@ then taking the average to get the approximation
 
 $$ E[f(X)] \approx \frac{1}{n} \sum_{t=1}^n f(X_t). $$
 
-That is, we can approximate the population mean $$ f(X) $$ using the sample mean above. As long as we draw the $$ X_t $$
-independently, an accurate approximation is guaranteed by laws of large numbers by increasing the value of $$ n $$. However, this is infeasible given that the
+That is, we can approximate the population mean of $$ f(X) $$ using the sample mean above. As long as we draw the $$ X_t $$
+independently, an accurate approximation is guaranteed by laws of large numbers, as $$ n $$ goes to infinity. However, this is infeasible given that the
 distribution $$ \pi $$ can be very non-standard. This is not necessarily a problem, and we can sample dependently as long as
 the samples are drawn throughout the possible values of $$ \pi $$ in the correct proportions.
 
@@ -167,36 +171,65 @@ The Metropolis-Hastings algorithm:
 Though simple, this algorithm has the remarkable property that the stationary distribution of the chain (under some regularity conditions)
 will be $$ \pi $$, regardless of the proposal distribution $$ q(.|.) $$! Why is this the case?
 
-INSERT PROOF OUTLINE HERE
+The probability of moving from state $$ X_t $$ to a new state $$ Y = X_{t+1} $$ 
 
-### Examples in R
+$$ q(X_{t+1}|X_t)\alpha(X_t,X_{t+1}). $$
 
-Let's return to our first example where we wanted to sample from the standard normal distribution.
+The probability of rejecting all possible new candidates is given by
 
-# Implementing MCMC
+$$ 1 - \int q(Y |X_t)\alpha(X_t,Y)dY .$$
 
-## Proposal distributions
+In total, then, the transition kernel is 
 
-## Metropolis algorithm
+$$ P(X_{t+1}|X_t) = q(X_{t+1} |X_t)\alpha(X_t,X_{t+1}) + I(X_{t+1} = X_t)\left[1-\int q(Y|X_t)\alpha(X_t,Y)dY \right] ,$$
 
-## Independence sampler
+where $$ I $$ is the indicator function (1 if condition is satisfied, 0 otherwise).
 
-## Single-component Metropolis-Hastings
+Now, consider 
 
-## Gibbs sampling
+$$ \pi(X_t)q(X_{t+1} |X_t)\alpha(X_t,X_{t+1}). $$ 
 
-## Blocking
+Suppose $$ \alpha(X_t,X_{t+1}) = 1 $$. Then we have 
 
-## Updating order
+$$ \alpha(X_{t+1},X_{t}) = \frac{\pi(X_{t})q(X_{t+1}|X_{t})}{\pi(X_{t+1})q(X_{t}|X_{t+1})} $$
 
-## Number of chains
+by definition of $$ \alpha $$. Therefore, we have the equality
 
-## Starting values
+$$ \pi(X_t)q(X_{t+1} |X_t) = \frac{\pi(X_{t+1})q(X_t|X_{t+1})}{\pi(X_{t+1})q(X_t|X_{t+1})}\cdot \pi(X_t)q(X_{t+1} |X_t) = \pi(X_{t+1})q(X_t|X_{t+1})\alpha(X_{t+1},X_{t}). $$
 
-## Determining burn-in
+The opposite case holds in a similar manner. As a result, we have 
 
-## Determining stopping time
+$$ \pi(X_t)q(X_{t+1} |X_t)\alpha(X_t,X_{t+1}) = \pi(X_{t+1})q(X_t|X_{t+1})\alpha(X_{t+1},X_{t}) $$
 
-## Output analysis
+Then, by the form we found for the transition kernel, we have the *detailed balance equation*:
+
+$$ \pi(X_t)P(X_{t+1}|X_{t})  = \pi(X_{t+1})P(X_t|X_{t+1}). $$
+
+Notice that we do not need to worry about including the indicator function part of the transition kernel since it will
+only be nonzero in the case that $$ X_{t+1} = X_t $$, and so this part will cancel on each side. Integrating both sides
+of the detailed balance equation gives 
+
+$$ \int \pi(X_t)P(X_{t+1}|X_{t}) dX_t  = \int \pi(X_{t+1})P(X_t|X_{t+1}) dX_t, $$
+
+where we can then pull out the function of the future value $$ X_{t+1} $$ on the right hand side to get 
+
+$$ \int \pi(X_t)P(X_{t+1}|X_{t}) dX_t  = \pi(X_{t+1}) \int P(X_t|X_{t+1}) dX_t, $$
+
+which will reduce to 
+
+$$ \int \pi(X_t)P(X_{t+1}|X_{t}) dX_t  = \pi(X_{t+1}), $$
+
+since the integral on the right hand side evaluates to 1.
+
+Notice that the left hand side of the equation gives the marginal distribution for $$ X_{t+1} $$ under the assumption
+that $$ X_t $$ is from $$ \pi $$. Essentially, this says that once I am able to get a single sample from $$ \pi $$, all
+subsequent samples will also be from $$ \pi $$. In other words, the stationary distribution is $$ \pi $$. With this, we 
+have shown that the Metropolis-Hastings algorithm does indeed work (mostly) as intended. We will discuss the fact that the
+memorylessness property holds in another article.
 
 # Conclusion
+
+In this article, we saw how to obtain a dependent sample using the Metropolis-Hastings algorithm, and proved some of its
+desirable properties. In articles to come, we will explore specific implementations such as Gibbs sampler, see concrete examples
+of how to use MCMC techniques, and prove further properties related to the ideas given here.
+

@@ -1,0 +1,28 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+My portfolio of projects and other related items.
+
+<div class="portfolio-grid">
+    {% for item in site.portfolio %}
+    <div class="portfolio-cell">
+        <div class="colL">
+            <a href="{{ item.url }}"> 
+                <img src="{{ site.baseurl }}/{{ item.img }}" class="" alt=""> 
+            </a>
+        </div>
+        <div class="colR">
+            <h3><a href="{{ item.url }}">{{ item.title }}</a> </h3> 
+
+            <i><b> {{ item.date | date: "%B %-d, %Y" }} </b></i> 
+
+            <p>
+                {{ item.teaser | strip_html | truncate:250 }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

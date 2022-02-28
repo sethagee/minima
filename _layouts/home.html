@@ -8,7 +8,16 @@ layout: default
   {%- endif -%}
 
   {{ content }}
-
+  
+  <div class="colL">
+  <div class="content">
+  <article >
+  <section class="post-content">
+    <h1>Title</h1>
+      <p>Description.</p>
+  </section>
+  </article>
+  </div>
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
