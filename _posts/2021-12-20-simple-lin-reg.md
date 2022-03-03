@@ -4,7 +4,7 @@ title: "Simple Linear Regression in Python"
 usemathjax: true
 ---
 
-In this project, we explore the idea behind simple linear regression, the gradient descent algorithm, and implement it using Python. 
+In this article, we explore the idea behind simple linear regression, the gradient descent algorithm, and implement it using Python. 
 A comparison between our implementation is given against that from sklearn. We will be needing the packages below:
 
 ```python
@@ -154,7 +154,7 @@ How can we then go about fitting a line to data? We need some method of minimizi
 
 $$ J(\theta_0, \theta_1) = \frac{\sum_{i=1}^m(\theta_0 + \theta_1 x_i - y_i)^2}{2m}$$
 
-where $$ \theta_0$$ is our intercept of the line and $$ \theta_1$$ is the slope of our line, $$ m$$ is the number of values in our data set, and $$ x_i$$ and $$ y_i$$ are the respective inputs and /assets/img/outputs of the data set.
+where $$ \theta_0$$ is our intercept of the line and $$ \theta_1$$ is the slope of our line, $$ m$$ is the number of values in our data set, and $$ x_i$$ and $$ y_i$$ are the respective inputs and outputs of the data set.
 
 Notice that the above function does not give you the average error, but instead the average squared error. Taking the square of distances or errors has such advantages as ensuring distances are positive and also further penalizing large distances.
 
@@ -218,7 +218,7 @@ def simpleLinCost(X, y, theta):
         Inputs. Number of rows is m and number of columns is 2. Bias term must be added.
         Shape (m, 2)
     y : array_like
-        /assets/img/outputs at each data point x. 
+        outputs at each data point x. 
         Shape (m, )
     theta : array_like
         Parameters for linear regression. 
@@ -298,7 +298,7 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         Inputs. Number of rows is m and number of columns is 2. Bias term must be added.
         Shape (m, 2)
     y : array_like
-        /assets/img/outputs at each data point x. 
+        outputs at each data point x. 
         Shape (m, )
     theta : array_like
         Parameters for linear regression. 
