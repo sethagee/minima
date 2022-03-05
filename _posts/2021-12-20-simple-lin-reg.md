@@ -62,7 +62,7 @@ plt.ylabel("y value")
 
 
     
-![png](/assets/img/output_5_1.png)
+![png](/assets/img/simple-lin-reg/output_5_1.png)
     
 
 
@@ -86,7 +86,7 @@ plt.plot(x, 1.6*x - 1, 'k--')
 
 
     
-![png](/assets/img/output_7_1.png)
+![png](/assets/img/simple-lin-reg/output_7_1.png)
     
 
 
@@ -101,14 +101,14 @@ plt.ylabel("y value")
 plt.plot(x, 1.2*x, 'r--')
 
 # Plot values from X on the red line
-line_/assets/img/output = 1.2 * X
-plt.scatter(X, line_/assets/img/output, c='r')
+line_/assets/img/simple-lin-reg/output = 1.2 * X
+plt.scatter(X, line_/assets/img/simple-lin-reg/output, c='r')
 
 # Find vertical distance between data and line and plot them
-v_dist = line_/assets/img/output - y
+v_dist = line_/assets/img/simple-lin-reg/output - y
 
 for i in range(5):
-    plt.vlines(X[i], y[i], line_/assets/img/output[i])
+    plt.vlines(X[i], y[i], line_/assets/img/simple-lin-reg/output[i])
     d = round(v_dist[i], 2)
     label = f'Distance is {d}'
     plt.annotate(label, (X[i], y[i] - 0.5), textcoords='offset points', xytext=(0,10))
@@ -116,7 +116,7 @@ for i in range(5):
 
 
     
-![png](/assets/img/output_9_0.png)
+![png](/assets/img/simple-lin-reg/output_9_0.png)
     
 
 
@@ -131,14 +131,14 @@ plt.ylabel("y value")
 plt.plot(x, 0.8*x + 1, 'g--')
 
 # Plot values from X on the red line
-line_/assets/img/output = 0.8 * X + 1
-plt.scatter(X, line_/assets/img/output, c='g')
+line_/assets/img/simple-lin-reg/output = 0.8 * X + 1
+plt.scatter(X, line_/assets/img/simple-lin-reg/output, c='g')
 
 # Find vertical distance between data and line and plot them
-v_dist = line_/assets/img/output - y
+v_dist = line_/assets/img/simple-lin-reg/output - y
 
 for i in range(5):
-    plt.vlines(X[i], y[i], line_/assets/img/output[i])
+    plt.vlines(X[i], y[i], line_/assets/img/simple-lin-reg/output[i])
     d = round(v_dist[i], 2)
     label = f'Distance is {d}'
     plt.annotate(label, (X[i], y[i] - 0.5), textcoords='offset points', xytext=(0,10))
@@ -146,7 +146,7 @@ for i in range(5):
 
 
     
-![png](/assets/img/output_11_0.png)
+![png](/assets/img/simple-lin-reg/output_11_0.png)
     
 
 
@@ -223,7 +223,7 @@ def simpleLinCost(X, y, theta):
     theta : array_like
         Parameters for linear regression. 
         Shape (2, )
-    /assets/img/output:
+    /assets/img/simple-lin-reg/output:
     -------
     J : float
         The value of the cost function
@@ -307,7 +307,7 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         Learning rate
     num_iters : int
         Number of iterations to run gradient descent
-    /assets/img/output:
+    /assets/img/simple-lin-reg/output:
     -------
     theta : array_like
         The optimal parameters as found by gradient descent
@@ -351,7 +351,7 @@ plt.plot(x, theta[0] + theta[1]*x, '--')
 
 
     
-![png](/assets/img/output_23_1.png)
+![png](/assets/img/simple-lin-reg/output_23_1.png)
     
 
 
@@ -371,7 +371,7 @@ plt.ylabel("Value of cost function")
 
 
     
-![png](/assets/img/output_25_1.png)
+![png](/assets/img/simple-lin-reg/output_25_1.png)
     
 
 
@@ -396,7 +396,7 @@ plt.ylabel("Value of cost function")
 
 
     
-![png](/assets/img/output_27_1.png)
+![png](/assets/img/simple-lin-reg/output_27_1.png)
     
 
 
@@ -420,7 +420,7 @@ plt.ylabel("Value of cost function")
 
 
     
-![png](/assets/img/output_29_1.png)
+![png](/assets/img/simple-lin-reg/output_29_1.png)
     
 
 
@@ -445,7 +445,7 @@ plt.ylabel("Value of cost function")
 
 
     
-![png](/assets/img/output_31_1.png)
+![png](/assets/img/simple-lin-reg/output_31_1.png)
     
 
 
@@ -469,7 +469,7 @@ plt.ylabel("Value of cost function")
 
 
     
-![png](/assets/img/output_33_1.png)
+![png](/assets/img/simple-lin-reg/output_33_1.png)
     
 
 
@@ -488,7 +488,7 @@ plt.plot(x, theta[0] + theta[1]*x, '--')
 
 
     
-![png](/assets/img/output_35_1.png)
+![png](/assets/img/simple-lin-reg/output_35_1.png)
     
 
 
@@ -510,7 +510,7 @@ plt.plot(x, reg.intercept_ + reg.coef_[1]*x)
 
 
     
-![png](/assets/img/output_37_1.png)
+![png](/assets/img/simple-lin-reg/output_37_1.png)
     
 
 

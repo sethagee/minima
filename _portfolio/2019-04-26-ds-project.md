@@ -2,11 +2,11 @@
 layout: post
 title: "Introduction to Data Science Final Project"
 usemathjax: true
-img: "assets/img/cute-pets.png"
+img: "assets/img/ds-final/cute-pets.png"
 teaser: Pet adoption application that helps pets get adopted.
 ---
 
-![image](/assets/img/ds-final-proj-img.png)
+![image](/assets/img/ds-final/ds-final-proj-img.png)
 
 ## Description of Project
 
