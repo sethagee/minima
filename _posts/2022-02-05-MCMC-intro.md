@@ -8,6 +8,8 @@ title: "MCMC in Practice - Introduction to Markov Chain Monte Carlo"
 
 # Introduction to the problem
 
+For an implementation of the ideas presented here, please see [MCMC in Practice - Two Basic Algorithms in R](/2022/02/11/MCMC-algorithms.html)
+
 When speaking about the probability of some event, we are really speaking about integration over some probability distribution. In most applications, we are interested also in computing expectations of functions of random variables (to find the mean, variance, etc.). 
 While integrating in this fashion is possible in some cases, high dimensional distributions can lead to difficult or impossible to compute integrals.
 
