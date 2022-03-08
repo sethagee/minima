@@ -46,4 +46,4 @@ oppurtunity to show them my capabilities.
 
 ## Resume
 
-Insert resume here :)
+You can see my [resume here](/assets/resume.pdf)
