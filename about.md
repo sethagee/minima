@@ -46,4 +46,6 @@ oppurtunity to show them my capabilities.
 
 ## Resume
 
-You can see my [resume here](/assets/resume.pdf)
+You can see my [resume here.](/assets/resume.pdf)
+
+For an ATS readable version written in LaTeX, please see [this resume.](/assets/resume-tex.pdf)
