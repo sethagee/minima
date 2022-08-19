@@ -6,10 +6,7 @@ permalink: /about/
 
 ## Education and Experience Timeline
 
-Machine learning, probability and stochastic processes, pure and applied mathematics, statistics, 
-and the ability to communicate these advanced topics to the average person and apply them to solving real problems. 
-These are the ideas that I live for each day, and hope to apply in my future career. How have these things been a part of my
-life so far?
+Here is an overview of my past, present, and future. 
 
 ### Undergraduate 2015-2019
 
@@ -28,21 +25,29 @@ a 4.0 GPA. My thesis used the theory of stochastic processes to derive the Black
 derivatives, and I gave several presentations on related topics. Deepening my understanding of statistical analysis and the 
 ability to communicate mathematics, I taught two semesters of undergraduate statistics during this time as well.
 
-### Instructor of Mathematics 2021-Present
+### Instructor of Mathematics 2021-2022
 
-After graduation, I was offered a temporary instructor position which I currently still hold. I have taught various courses 
+After graduation, I was offered a temporary instructor position which I was very happy to accept. I have taught various courses 
 in algebra, statistics, and pre-calculus, and my ability to turn complicated ideas into easily digestible content for the 
-typical student has improved dramatically.
+typical student saw great improvement.
 
-In addition to my teaching, I continue to research mathematics, having weekly meetings with my graduate thesis advisor, Dr.
-Motoya Machida, and I am also taking a course in mathematical cryptography. Outside of mathematics, I have been teaching myself
-Python (and several packages), continue to learn R, and take online courses related to machine learning and data science.
+In addition to my teaching, I continued to research mathematics, have weekly meetings with my graduate thesis advisor, Dr.
+Motoya Machida, and took a course in mathematical cryptography. Outside of mathematics, I taught myself
+Python (and several packages), some data science/machine learning, and made this website.
+
+I look back on the many great experiences I had with students during this time as a great time in my life, and hope to continue to have opportunities 
+to teach in the future.
+
+### Dynetics 2022-Present
+
+In 2022, I accepted a position as a scientist at Dynetics. I am enjoying my time here, solving difficult problems every day. I love being around so 
+many smart, helpful, and overall good people, and look forward to a long stay with the company. In my past time I continue to self learn mathematics
+and other interesting topics.
 
 ### Future
 
-In the near future, I hope to begin a new journey in the world of machine learning and data science. I believe I am a
-great fit for the field, have passion to learn and grow, and will be a vital asset to any company who gives me an
-oppurtunity to show them my capabilities.
+In the future I hope to continue to cultivate my passion for mathematics, and apply it wherever I can. I will continue to teach to whoever will listen 
+(or can stand to listen). Much of my research efforts will be updated in the articles section.
 
 ## Resume
 
