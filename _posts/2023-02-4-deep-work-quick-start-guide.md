@@ -27,7 +27,7 @@ After choosing an appropriate task, you need to choose the amount of time you wi
 
 When practicing Deep Work, I am always on a timer. I refer to Deep Work done for a set period of time as a "Deep Work block". Without timing my Deep Work, I tend to take a break whenever I am uncomfortable with the task at hand, increasing the number of context switches and therefore lowering my amount of work output. When you are on the timer, you are focused on ONLY ONE task. No checking email, no unrelated conversations, no looking at your phone, and no switching to a different task. This may sound difficult, but you are allowed to choose the amount of time on the timer, and so breaks from focus should be built in to the system as needed. The key here is that when the timer is on, you are focused on the chosen task exclusively.
 
-Usage of a timer additionally allows you to have metrics for tracking your productivity and cognition. Keep track of the total number of Deep Work hours per week, and you may begin to notice that your quality and volume of work increases as Deep Work hours increase (and the converse, as well). Keep track of the length of your Deep Work blocks and you can track your cognitive fitness. Are you only able to do Deep Work for 30 minutes at a time before getting fatigued? Work on pushing that number up, and watch your ability to think and produce value at your job improve with it.
+Usage of a timer additionally allows you to have metrics for tracking your productivity and cognition. Keep track of the total number of Deep Work hours per week, and you may begin to notice that your quality and volume of work increases as Deep Work hours increase (and the converse, as well). Keep track of the length of your Deep Work blocks and you can track your cognitive fitness. Are you only able to do Deep Work for 30 minutes at a time before getting fatigued? Work on pushing that number up, and watch your ability to think and produce value at your job go up with it.
 
 If a task is finished in the middle of a Deep Work block, just move on to a new one. If interrupted or distracted, write down the amount of time completed and then restart the timer at the next available time. With this in mind, choosing an appropriate amount of time for your block should be done with care.
 
@@ -45,11 +45,11 @@ In the case of tasks which are easily estimated or whose total time to complete 
 
 #### Free form time intervals
 
-This option may be used on time sensitive or critical tasks. The idea here is to start a timer, and keep it running for as long as necessary to complete the task. The key is that no breaks are to be taken until the task is complete. This type of Deep Work block is best suited for situations where the task must be completed as soon as possible.
+This option may be used on time sensitive or critical tasks. The idea here is to start a timer and keep it running for as long as necessary to complete the task. The key is that no breaks are to be taken until the task is complete. This type of Deep Work block is best suited for situations where the task must be completed as soon as possible.
 
 ## Planning Deep Work in your day, week, and beyond
 
-Planning on multiple scales will help with your personal implementation of Deep Work. If I know what my projects, goals, and requirements are for this quarter, I can use that to plan out what is done on a weekly basis. Once I have my week planned, each day can be divided into blocks of time that are put toward a specific goal. Quarterly, weekly, and daily planning keeps you on track and lets you properly assign your time during the day to whatever tasks are important to meet your goals.
+Planning on multiple scales has been invaluable in my implementation of Deep Work. If I know what my projects, goals, and requirements are for this quarter, I can use that to plan out what is done on a weekly basis. Once I have my week planned, each day can be divided into blocks of time that are put toward a specific goal. Quarterly, weekly, and daily planning keeps you on track and lets you properly assign your time during the day to whatever tasks are important to meet your goals.
 
 Although I will not go over quarterly or weekly planning in this article, I will give a brief overview of my own daily planning routine that can be easily integrated into your work day:
 
